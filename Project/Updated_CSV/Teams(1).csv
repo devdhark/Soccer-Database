@@ -1,0 +1,129 @@
+teamID,team_name,standing,games_played,wins,draws,losses,goals_scored,goals_conceded,goal_differential,points,leaguename
+1,Manchester City,1,38,32,4,2,106,27,79,100,Premier League
+2,Manchester United,2,38,25,6,7,68,28,40,81,Premier League
+3,Tottenham Hotspur,3,38,23,8,7,74,36,38,77,Premier League
+4,Liverpool,4,38,21,12,5,84,38,46,75,Premier League
+5,Chelsea,5,38,21,7,10,62,38,24,70,Premier League
+6,Arsenal,6,38,19,6,13,74,51,23,63,Premier League
+7,Burnley,7,38,14,12,12,36,39,-3,54,Premier League
+8,Everton,8,38,13,10,15,44,58,-14,49,Premier League
+9,Leicester City,9,38,12,11,15,56,60,-4,47,Premier League
+10,Newcastle United,10,38,12,8,18,39,47,-8,44,Premier League
+11,Crystal Palace,11,38,11,11,16,45,55,-10,44,Premier League
+12,AFC Bournemouth,12,38,11,11,16,45,61,-16,44,Premier League
+13,West Ham United,13,38,10,12,16,48,68,-20,42,Premier League
+14,Watford,14,38,11,8,19,44,64,-20,41,Premier League
+15,Brighton & Hove Albion,15,38,9,13,16,34,54,-20,40,Premier League
+16,Huddersfield Town,16,38,9,10,19,28,58,-30,37,Premier League
+17,Southampton,17,38,7,15,16,37,56,-19,36,Premier League
+18,Swansea City,18,38,8,9,21,28,56,-28,33,Premier League
+19,Stoke City,19,38,7,12,19,35,68,-33,33,Premier League
+20,West Bromwich Albion,20,38,6,13,19,31,56,-25,31,Premier League
+21,Bayern Munich,1,34,27,3,4,92,28,64,84,Bundesliga
+22,FC Schalke 04,2,34,18,9,7,53,37,16,63,Bundesliga
+23,TSG 1899 Hoffenheim,3,34,15,10,9,66,48,18,55,Bundesliga
+24,Borussia Dortmund,4,34,15,10,9,64,47,17,55,Bundesliga
+25,Bayer Leverkusen,5,34,15,10,9,58,44,14,55,Bundesliga
+26,RB Leipzig,6,34,15,8,11,57,53,4,53,Bundesliga
+27,VfB Stuttgart,7,34,15,6,13,36,36,0,51,Bundesliga
+28,Eintracht Frankfurt,8,34,14,7,13,45,45,0,49,Bundesliga
+29,Borussia M'gladbach,9,34,13,8,13,47,52,-5,47,Bundesliga
+30,Hertha BSC,10,34,10,13,11,43,46,-3,43,Bundesliga
+31,Werder Bremen,11,34,10,12,12,37,40,-3,42,Bundesliga
+32,FC Augsburg,12,34,10,11,13,43,46,-3,41,Bundesliga
+33,Hannover 96,13,34,10,9,15,44,54,-10,39,Bundesliga
+34,1. FSV Mainz 05,14,34,9,9,16,38,52,-14,36,Bundesliga
+35,SC Freiburg,15,34,8,12,14,32,56,-24,36,Bundesliga
+36,VfL Wolfsburg,16,34,6,15,13,36,48,-12,33,Bundesliga
+37,Hamburger SV,17,34,8,7,19,29,53,-24,31,Bundesliga
+38,1. FC Koln,18,34,5,7,22,35,70,-35,22,Bundesliga
+39,Barcelona,1,38,28,9,1,99,29,70,93,La Liga
+40,Atletico Madrid,2,38,23,10,5,58,22,36,79,La Liga
+41,Real Madrid,3,38,22,10,6,94,44,50,76,La Liga
+42,Valencia,4,38,22,7,9,65,38,27,73,La Liga
+43,Villarreal,5,38,18,7,13,57,50,7,61,La Liga
+44,Real Betis,6,38,18,6,14,60,61,-1,60,La Liga
+45,Sevilla,7,38,17,7,14,49,58,-9,58,La Liga
+46,Getafe,8,38,15,10,13,42,33,9,55,La Liga
+47,Eibar,9,38,14,9,15,44,50,-6,51,La Liga
+48,Girona FC,10,38,14,9,15,50,59,-9,51,La Liga
+49,Real Sociedad,11,38,14,7,17,66,59,7,49,La Liga
+50,Celta Vigo,12,38,13,10,15,59,60,-1,49,La Liga
+51,Espanyol,13,38,12,13,13,36,42,-6,49,La Liga
+52,CD Alaves,14,38,15,2,21,40,50,-10,47,La Liga
+53,Levante,15,38,11,13,14,44,58,-14,46,La Liga
+54,Athletic Bilbao,16,38,10,13,15,41,49,-8,43,La Liga
+55,CD Leganes,17,38,12,7,19,34,51,-17,43,La Liga
+56,Deportivo La Coruna,18,38,6,11,21,38,76,-38,29,La Liga
+57,Las Palmas,19,38,5,7,26,24,74,-50,22,La Liga
+58,Malaga,20,38,5,5,28,24,61,-37,20,La Liga
+59,Paris Saint-Germain,1,38,29,6,3,108,29,79,93,French Ligue 1
+60,AS Monaco,2,38,24,8,6,85,45,40,80,French Ligue 1
+61,Olympique Lyonnais,3,38,23,9,6,87,43,44,78,French Ligue 1
+62,Olympique Marseille,4,38,22,11,5,80,47,33,77,French Ligue 1
+63,Stade Rennes,5,38,16,10,12,50,44,6,58,French Ligue 1
+64,Girondins De Bordeaux,6,38,16,7,15,53,48,5,55,French Ligue 1
+65,AS Saint-Etienne,7,38,15,10,13,47,50,-3,55,French Ligue 1
+66,OGC Nice,8,38,15,9,14,53,52,1,54,French Ligue 1
+67,FC Nantes,9,38,14,10,14,36,41,-5,52,French Ligue 1
+68,Montpellier HSC,10,38,11,18,9,36,33,3,51,French Ligue 1
+69,Dijon FCO,11,38,13,9,16,55,73,-18,48,French Ligue 1
+70,En Avant Guingamp,12,38,12,11,15,48,59,-11,47,French Ligue 1
+71,SC Amiens,13,38,12,9,17,37,42,-5,45,French Ligue 1
+72,Angers SCO,14,38,9,14,15,42,52,-10,41,French Ligue 1
+73,RC Strasbourg,15,38,9,11,18,44,67,-23,38,French Ligue 1
+74,Caen,16,38,10,8,20,27,52,-25,38,French Ligue 1
+75,Lille OSC,17,38,10,8,20,41,67,-26,38,French Ligue 1
+76,Toulouse,18,38,9,10,19,38,54,-16,37,French Ligue 1
+77,Troyes AC,19,38,9,6,23,32,59,-27,33,French Ligue 1
+78,FC Metz,20,38,6,8,24,34,76,-42,26,French Ligue 1
+79,PSV Eindhoven,1,34,26,5,3,87,39,48,83,Eredivisie
+80,AFC Ajax,2,34,25,4,5,89,33,56,79,Eredivisie
+81,AZ Alkmaar,3,34,22,5,7,72,38,34,71,Eredivisie
+82,Feyenoord,4,34,20,6,8,76,39,37,66,Eredivisie
+83,FC Utrecht,5,34,14,12,8,58,53,5,54,Eredivisie
+84,Vitesse Arnhem,6,34,13,10,11,63,47,16,49,Eredivisie
+85,ADO Den Haag,7,34,13,8,13,45,53,-8,47,Eredivisie
+86,SC Heerenveen,8,34,12,10,12,48,53,-5,46,Eredivisie
+87,PEC Zwolle,9,34,12,8,14,42,54,-12,44,Eredivisie
+88,Heracles Almelo,10,34,11,9,14,50,64,-14,42,Eredivisie
+89,SBV Excelsior,11,34,11,7,16,41,56,-15,40,Eredivisie
+90,FC Groningen,12,34,8,14,12,50,50,0,38,Eredivisie
+91,Willem II Tilburg,13,34,10,7,17,50,63,-13,37,Eredivisie
+92,NAC Breda,14,34,9,7,18,41,57,-16,34,Eredivisie
+93,VVV Venlo,15,34,7,13,14,35,54,-19,34,Eredivisie
+94,Roda JC Kerkrade,16,34,8,6,20,42,69,-27,30,Eredivisie
+95,Sparta Rotterdam,17,34,7,6,21,34,75,-41,27,Eredivisie
+96,FC Twente,18,34,5,9,20,37,63,-26,24,Eredivisie
+97,Juventus,1,38,30,5,3,86,24,62,95,Serie A
+98,Napoli,2,38,28,7,3,77,29,48,91,Serie A
+99,AS Roma,3,38,23,8,7,61,28,33,77,Serie A
+100,SS Lazio,4,38,21,9,8,89,49,40,72,Serie A
+101,Internazionale,5,38,20,12,6,66,30,36,72,Serie A
+102,AC Milan,6,38,18,10,10,56,42,14,64,Serie A
+103,Atalanta,7,38,16,12,10,57,39,18,60,Serie A
+104,Fiorentina,8,38,16,9,13,54,46,8,57,Serie A
+105,Torino,9,38,13,15,10,54,46,8,54,Serie A
+106,Sampdoria,10,38,16,6,16,56,60,-4,54,Serie A
+107,Sassuolo,11,38,11,10,17,29,59,-30,43,Serie A
+108,Genoa,12,38,11,8,19,33,43,-10,41,Serie A
+109,Udinese,13,38,12,4,22,48,63,-15,40,Serie A
+110,Chievo,14,38,10,10,18,36,59,-23,40,Serie A
+111,Bologna,15,38,11,6,21,40,52,-12,39,Serie A
+112,Cagliari,16,38,11,6,21,33,61,-28,39,Serie A
+113,SPAL,17,38,8,14,16,39,59,-20,38,Serie A
+114,FC Crotone,18,38,9,8,21,40,66,-26,35,Serie A
+115,Hellas Verona,19,38,7,4,27,30,78,-48,25,Serie A
+116,Benevento,20,38,6,3,29,33,84,-51,21,Serie A
+117,Celtic,1,38,24,10,4,73,25,48,82,Scottish Premiership
+118,Aberdeen,2,38,22,7,9,56,37,19,73,Scottish Premiership
+119,Rangers,3,38,21,7,10,76,50,26,70,Scottish Premiership
+120,Hibernian,4,38,18,13,7,62,46,16,67,Scottish Premiership
+121,Kilmarnock,5,38,16,11,11,49,47,2,59,Scottish Premiership
+122,Heart of Midlothian,6,38,12,13,13,39,39,0,49,Scottish Premiership
+123,Motherwell,7,38,13,9,16,43,49,-6,48,Scottish Premiership
+124,St Johnstone,8,38,12,10,16,42,53,-11,46,Scottish Premiership
+125,Dundee,9,38,11,6,21,36,57,-21,39,Scottish Premiership
+126,Hamilton Academical,10,38,9,6,23,47,68,-21,33,Scottish Premiership
+127,Partick Thistle,11,38,8,9,21,31,61,-30,33,Scottish Premiership
+128,Ross County,12,38,6,11,21,40,62,-22,29,Scottish Premiership

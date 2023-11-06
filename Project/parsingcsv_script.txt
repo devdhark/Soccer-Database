@@ -1,0 +1,89 @@
+The following the code from the file parsingcsv.py:
+import pandas as pd
+
+pd.options.display.width = 400          # Display Options
+pd.options.display.max_rows = 5000
+pd.options.display.max_columns = 999
+# Creates the edited Team.csv file
+teams = pd.read_csv('ALLTeams.csv')
+teams = teams[teams["Table Type"] == "League Table"]    # Filters out some unnecessary rows in the teams table
+teams = teams.reset_index()
+teams['teamID'] = range(1, 1+len(teams))    # Adds teamID column for each team
+teams.rename(
+    columns={
+        "Team": "teamname",
+        "Pos": "standing",
+        "P": "games_played",
+        "W": "wins",
+        "D": "draws",
+        "L": "losses",
+        "F": "goals_scored",
+        "A": "goals_conceded",
+        "GD": "goal_differential",
+        "Pts": "points",
+        "League":"leaguename"
+    },
+    inplace=True
+)
+teams = teams[['teamID', 'teamname', 'standing', 'games_played', 'wins', 'draws', 'losses', 'goals_scored', 'goals_conceded', 'goal_differential',
+         'points', 'leaguename']]
+teams = teams.fillna(0)
+# print(teams)
+teams.to_csv("Teams.csv", index=False, encoding='utf8')
+# Creates the edited Playerstats.csv file
+playerstats = pd.read_csv('Players.csv')
+playerstats = playerstats.dropna(subset=['Player'])
+playerstats = playerstats.reset_index()
+playerstats['playerID'] = range(1, 1+len(playerstats))  # Adds playerID column for each player
+playerstats.rename(
+    columns={
+        "Player": "playername",
+        "Team": "teamname",
+        "League": "leaguename",
+        "Position": "position",
+        "Appearances": "appearances",
+        "Started": "starts",
+        "Goals": "goals",
+        "Assists": "assists",
+        "CS": "cleansheets",
+        "Yellow Cards":"yellowcards",
+        "Sent Off":"sentoff",
+        "Minutes played":"minutesplayed"
+    },
+    inplace=True
+)
+playerstats = playerstats[['playerID', 'playername', 'teamname', 'leaguename', 'position', 'appearances', 'starts',
+                           'goals', 'assists', 'cleansheets', 'yellowcards', 'sentoff', 'minutesplayed']]
+playerstats = playerstats.fillna(0)
+# print(playerstats)
+playerstats.to_csv("Playerstats.csv", index=False, encoding='utf8')
+# Creates the edited League.csv file
+league = pd.DataFrame(
+    {
+        'leagueID': [1, 2, 3, 4, 5, 6, 7],
+        'league_name': ['Premier League', 'Bundesliga', 'La Liga', 'French Ligue 1', 'Eredivisie', 'Serie A', 'Scottish Premiership'],
+        'number_of_teams': [20, 18, 20, 20, 18, 20, 12]
+    }
+)
+# print(league)
+league.to_csv("League.csv", index=False, encoding='utf8')
+# Creates the edited Attendance.csv file
+a = pd.read_csv('Home attendance.csv')
+b = pd.read_csv('Away attendance.csv')
+attendance = a.merge(b, on='Team',how='left')
+attendance = attendance.reset_index()
+attendance['teamID'] = range(1, 1+len(attendance))  # Adds teamID column for each team
+attendance.rename(
+    columns={
+        "Team": "teamname",
+        "Avg Home Attendance": "Avg_Home_Attendance",
+        "Total Home Attendance": "Total_Home_Attendance",
+        "Avg Away Attendance": "Avg_Away_Attendance",
+        "Total Away Attendance": "Total_Away_Attendance",
+    },
+    inplace=True
+)
+attendance = attendance[['teamID', 'teamname', 'Avg_Home_Attendance', 'Total_Home_Attendance', 'Avg_Away_Attendance', 'Total_Away_Attendance']]
+attendance = attendance.fillna(0)
+# print(attendance)
+attendance.to_csv("Attendance.csv", index=False, encoding='utf8')

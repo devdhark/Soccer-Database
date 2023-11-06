@@ -1,0 +1,63 @@
+-- Adding Primary Keys and column types to each column of the table League.
+BEGIN TRANSACTION;
+CREATE TEMPORARY TABLE League_backup( leagueID, league_name, number_of_teams);
+INSERT INTO League_backup SELECT leagueID, league_name, number_of_teams FROM League;
+DROP TABLE League;
+CREATE TABLE League( leagueID int PRIMARY KEY NOT NULL, league_name varchar(20), number_of_teams int);
+INSERT INTO League SELECT leagueID, league_name, number_of_teams FROM League_backup;
+DROP TABLE League_backup;
+COMMIT;
+-- Adding Primary Keys and column types to each column of the table Attendance.
+BEGIN TRANSACTION;
+CREATE TEMPORARY TABLE Attendance_backup( teamID, teamname, Avg_Home_Attendance, Total_Home_Attendance, Avg_Away_Attendance, Total_Away_Attendance);
+INSERT INTO Attendance_backup SELECT teamID, teamname, Avg_Home_Attendance, Total_Home_Attendance,
+			Avg_Away_Attendance, Total_Away_Attendance FROM Attendance;
+DROP TABLE Attendance;
+CREATE TABLE Attendance( teamID int PRIMARY KEY NOT NULL, teamname varchar(25), Avg_Home_Attendance int, Total_Home_Attendance int,
+						Avg_Away_Attendance int, Total_Away_Attendance int);
+INSERT INTO Attendance SELECT teamID, teamname, Avg_Home_Attendance, Total_Home_Attendance,
+								Avg_Away_Attendance, Total_Away_Attendance FROM Attendance_backup;
+DROP TABLE Attendance_backup;
+COMMIT;
+-- First adds a new column leagueID to the table Teams and then adds Primary Keys, Foreign Keys, column types to each column of the table Teams.
+BEGIN TRANSACTION;
+ALTER TABLE Teams
+ADD leagueID int;
+UPDATE Teams SET leagueID = (select leagueID from League where Teams.leaguename = League.league_name);
+CREATE TEMPORARY TABLE team_backup( teamID, teamname, standing, games_played, wins, draws, losses, goals_scored, goals_conceded, goal_differential, 
+									points, leagueID);
+INSERT INTO team_backup SELECT teamID, teamname, standing, games_played, wins, draws, losses, goals_scored, goals_conceded, goal_differential,
+								points, leagueID FROM Teams;
+DROP TABLE Teams;
+CREATE TABLE Teams( teamID int PRIMARY KEY NOT NULL REFERENCES Attendance(teamID), teamname varchar(30), standing int, games_played int,
+					wins int, draws int, losses int, goals_scored int, goals_conceded int, 
+					goal_differential int, points int, leagueID int REFERENCES League(leagueID));
+INSERT INTO Teams SELECT teamID, teamname, standing, games_played, wins, draws, losses, goals_scored, goals_conceded, goal_differential, 
+							points, leagueID FROM team_backup;
+DROP TABLE team_backup;
+COMMIT;
+-- First adds a new column teamID to the table Teams and then adds Primary Keys, Foreign Keys and column types to each column of the table Playerstats.
+BEGIN TRANSACTION;
+ALTER TABLE Playerstats
+ADD teamID int;
+UPDATE Playerstats SET teamID = (select teamID from Teams where Playerstats.teamname = Teams.teamname);
+CREATE TEMPORARY TABLE Playerstats_backup( playerID, playername, teamID, leaguename, position, appearances, starts,
+                           goals, assists, cleansheets, yellowcards, sentoff, minutesplayed);
+INSERT INTO Playerstats_backup SELECT playerID, playername, teamID, leaguename, position, appearances, starts,
+                           goals, assists, cleansheets, yellowcards, sentoff, minutesplayed FROM Playerstats;
+DROP TABLE Playerstats;
+CREATE TABLE Playerstats( playerID int Primary Key NOT NULL, playername varchar(35), teamID int REFERENCES teams, leaguename varchar(20),
+							position varchar(15), appearances int, starts int,
+                           goals int NOT NULL DEFAULT 0, assists int NOT NULL DEFAULT 0, cleansheets int, yellowcards int, sentoff int NOT NULL DEFAULT 0, minutesplayed int);
+INSERT INTO Playerstats SELECT playerID, playername, teamID, leaguename, position, appearances, starts,
+                           goals, assists, cleansheets, yellowcards, sentoff, minutesplayed FROM Playerstats_backup;
+DROP TABLE Playerstats_backup;
+COMMIT;
+-- Creates a new linking table Players and then adds an extra leagueID column
+BEGIN TRANSACTION;
+CREATE TABLE Players( playerID int PRIMARY KEY REFERENCES Playerstats(playerID), playername varchar(35), teamID int REFERENCES Teams(teamID));
+INSERT INTO Players SELECT playerID, playername, teamID FROM Playerstats;
+ALTER TABLE Players
+ADD leagueID int REFERENCES League(leagueID);
+UPDATE Players SET leagueID = (select leagueID from Teams where Players.teamID = Teams.teamID);
+COMMIT;
